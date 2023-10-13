@@ -1,0 +1,212 @@
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+div {
+  display: block;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../styles/fonts/Roboto-Regular.ttf);
+}
+
+#slides {
+  position: relative;
+}
+
+#slides span {
+  font-family: Roboto;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles */
+  #slides {
+    font-size: 10vw;
+  }
+  td {
+    font-size: 7vw;
+  }
+  #skills-show {
+    padding-top: 20vw;
+  }
+  #skills-show img {
+    width: 13vw;
+  }
+  .calling-card-details {
+    font-size: 4vw;
+  }
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles */
+  #slides {
+    font-size: 10vh;
+  }
+  td {
+    font-size: 7vh;
+  }
+  #skills-show {
+    padding-top: 20vh;
+  }
+  #skills-show img {
+    width: 13vh;
+  }
+  .calling-card-details {
+    font-size: 4vh;
+  }
+}
+
+#base-background {
+  background-image: linear-gradient(
+    0deg,
+    rgb(33, 33, 33) 50%,
+    rgb(238, 238, 238) 50%
+  );
+  min-height: 700vh;
+}
+
+.slide-template-1 {
+  mix-blend-mode: difference;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+#phase1 {
+  /* background-color: red; */
+  padding-top: 45vh;
+  position: relative;
+  animation-name: phase1-animation1, phase1-animation2;
+  animation-duration: 2s, 6s;
+  animation-iteration-count: 3, 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes phase1-animation1 {
+  0% {
+    padding-top: 45vh;
+  }
+  50% {
+    padding-top: 44vh;
+  }
+  100% {
+    padding-top: 45vh;
+  }
+}
+
+@keyframes phase1-animation2 {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+#phase2-span {
+  border-bottom: solid 5px black;
+}
+
+#phase3 {
+  padding-top: 20vh;
+}
+
+#skill-showcasing {
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: block;
+  overflow: auto !important;
+}
+
+#skills-tell {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+#skills-show {
+  position: absolute;
+  z-index: 0;
+}
+
+.flying-logos {
+  /* position: relative; */
+  animation-name: logos-to-the-right1;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes logos-to-the-right1 {
+  0% {
+    left: -50vw;
+    transform: rotate(360deg);
+  }
+  100% {
+    left: 100vw;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logos-to-the-right2 {
+  0% {
+    left: -80vw;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 100vw;
+    transform: rotate(360deg);
+  }
+}
+
+#phase4 {
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+}
+
+#phase5 {
+  position: relative;
+  width: 100%;
+  border: solid purple 8px;
+  border-radius: 20px;
+  background-color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#gio {
+  background-color: white;
+}
+
+.calling-card-texts {
+  font-family: Roboto;
+  background-color: rgb(232, 228, 201);
+}
+
+#calling-card-picture {
+  background-color: black;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  padding-left: 3%;
+  padding-right: 3%;
+  /* padding: solid red 8px; */
+}
+
+.calling-card-details {
+  border-bottom: solid burlywood 3px;
+}
+
+.calling-card-details span {
+  font-size: 2vh;
+  vertical-align: top;
+}
